@@ -1,0 +1,30 @@
+﻿@{
+    var motores = Model;
+}
+
+<h1>Motores</h1>
+<br />
+
+<button type="button" class="btn btn-dark mb-3" onclick="location.href='@Url.Action("Create", "Motor")'">Crear Motor</button>
+<br />
+<br />
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Tipo</th>
+            <th>Especificaciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var motor in motores)
+        {
+            <tr>
+                <td>@motor.Id</td>
+                <td>@motor.Tipo</td>
+                <td>@motor.Especificaciones</td>
+            </tr>
+        }
+    </tbody>
+</table>

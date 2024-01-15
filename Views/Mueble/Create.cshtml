@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Crear Motor";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" asp-controller="Motor" method="post">
+    <div class="form-group">
+        <label for="tipoMotor">Tipo de Motor</label>
+        <select id="tipoMotor" name="tipoMotor" class="form-control">
+            <option value="Electrico">Motor Eléctrico</option>
+            <option value="Combustion">Motor de Combustión</option>
+        </select>
+    </div> <br />
+
+    <div class="form-group">
+        <label for="especificaciones">Especificaciones</label>
+        <textarea class="form-control" id="especificaciones" name="especificaciones" placeholder="Ingresa las especificaciones del motor"></textarea>
+    </div> <br />
+
+    <button type="submit" class="btn btn-primary">Crear Motor</button>
+</form>
